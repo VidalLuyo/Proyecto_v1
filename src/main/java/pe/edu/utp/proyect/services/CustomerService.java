@@ -10,8 +10,15 @@ public interface CustomerService {
 
     Optional<Customer> findById(Long id);
 
+    List<Customer> findByState(String state);
+
     Customer save(Customer customer);
 
     Customer update(Customer customer);
     
+    void deleteLogical(Long id);
+
+    void restore(Long id);
+
+    void deletePhysical(Long id);
 }
